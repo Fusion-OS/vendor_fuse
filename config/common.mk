@@ -33,6 +33,10 @@ ifeq ($(WITH_GAPPS),true)
 $(call inherit-product-if-exists, vendor/gapps/common/common-vendor.mk)
 endif
 
+# Vendor overlays
+PRODUCT_PACKAGE_OVERLAYS += vendor/fuse/overlay
+DEVICE_PACKAGE_OVERLAYS += vendor/fuse/overlay/common
+
 # World APN list
 PRODUCT_PACKAGES += \
     apns-conf.xml
