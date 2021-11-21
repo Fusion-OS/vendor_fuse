@@ -2,4 +2,7 @@
 
 <resources>
 
+    <!-- Whether or not homepage should display user's account avatar -->
+    <bool name="config_show_avatar_in_homepage">true</bool>
+
 </resources>
