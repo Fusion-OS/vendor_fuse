@@ -35,6 +35,7 @@ SOONG_CONFIG_fuseGlobalVars += \
     supports_extended_compress_format \
     target_init_vendor_lib \
     target_surfaceflinger_udfps_lib \
+    target_ld_shim_libs \
     uses_qti_camera_device
 
 SOONG_CONFIG_NAMESPACES += fuseQcomVars
@@ -71,6 +72,7 @@ TARGET_SURFACEFLINGER_UDFPS_LIB ?= surfaceflinger_udfps_lib
 SOONG_CONFIG_fuseGlobalVars_additional_gralloc_10_usage_bits := $(TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS)
 SOONG_CONFIG_fuseGlobalVars_target_init_vendor_lib := $(TARGET_INIT_VENDOR_LIB)
 SOONG_CONFIG_fuseGlobalVars_bootloader_message_offset := $(BOOTLOADER_MESSAGE_OFFSET)
+SOONG_CONFIG_fuseGlobalVars_target_ld_shim_libs := $(subst $(space),:,$(TARGET_LD_SHIM_LIBS))
 ifneq ($(filter $(QSSI_SUPPORTED_PLATFORMS),$(TARGET_BOARD_PLATFORM)),)
 SOONG_CONFIG_fuseGlobalVars_qcom_display_headers_namespace := vendor/qcom/opensource/commonsys-intf/display
 else
