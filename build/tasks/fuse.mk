@@ -22,4 +22,19 @@ TARGET_FILES_PACKAGE := $(PRODUCT_OUT)/$(PROD_VERSION).zip
 .PHONY: fuse-prod
 fuse-prod: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) mv $(INTERNAL_OTA_PACKAGE_TARGET) $(TARGET_FILES_PACKAGE)
-	@echo "Package Complete: $(TARGET_FILES_PACKAGE)" >&2
+	@echo ""
+	@echo "=============================================="
+	@echo " ______         _              ____   _____"
+	@echo "|  ____|       (_)            / __ \ / ____|"
+	@echo "| |__ _   _ ___ _  ___  _ __ | |  | | (___  "
+	@echo "|  __| | | / __| |/ _ \| '_ \| |  | |\___ \ "
+	@echo "| |  | |_| \__ \ | (_) | | | | |__| |____) |"
+	@echo "|_|   \__,_|___/_|\___/|_| |_|\____/|_____/ "
+	@echo "=============================================="
+	@echo ""
+	@echo "Package Completed:"
+	@echo "Zip: $(TARGET_FILES_PACKAGE)"
+	@echo "Size: `du -h "$(TARGET_FILES_PACKAGE)" | cut -f1`"
+	@echo "SHA256: `sha256sum $(TARGET_FILES_PACKAGE) | cut -f 1 -d " "`"
+	@echo "MD5: `md5sum $(TARGET_FILES_PACKAGE) | cut -f 1 -d " "`"
+	@echo "" >&2
