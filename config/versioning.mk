@@ -17,7 +17,7 @@
 # limitations under the License.
 #
 
-PLATFORM_FUSE_RELEASE := 3.6-Aqua
+PLATFORM_FUSE_RELEASE := 4.0
 PLATFORM_FUSE_VERSION := $(PLATFORM_FUSE_RELEASE).$(shell date +%m%d%H%M)
 
 TARGET_PRODUCT_SHORT := $(subst fuse_,,$(TARGET_DEVICE))
