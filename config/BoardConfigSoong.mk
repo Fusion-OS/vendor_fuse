@@ -29,6 +29,7 @@ $(foreach v,$(EXPORT_TO_SOONG),$(eval $(call addVar,$(v))))
 SOONG_CONFIG_NAMESPACES += fuseGlobalVars
 SOONG_CONFIG_fuseGlobalVars += \
     additional_gralloc_10_usage_bits \
+    gralloc_handle_has_reserved_size \
     supports_extended_compress_format \
     target_init_vendor_lib \
     uses_qti_camera_device
@@ -44,11 +45,14 @@ SOONG_CONFIG_fuseGlobalVars += \
 endif
 
 # Soong bool variables
+SOONG_CONFIG_fuseGlobalVars_gralloc_handle_has_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE)
 SOONG_CONFIG_fuseGlobalVars_supports_extended_compress_format := $(AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT)
 SOONG_CONFIG_fuseGlobalVars_uses_qti_camera_device := $(TARGET_USES_QTI_CAMERA_DEVICE)
 SOONG_CONFIG_fuseQcomVars_uses_pre_uplink_features_netmgrd := $(TARGET_USES_PRE_UPLINK_FEATURES_NETMGRD)
 
 # Set default values
+TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS ?= 0
+TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE ?= false
 TARGET_INIT_VENDOR_LIB ?= vendor_init
 
 # Soong value variables
