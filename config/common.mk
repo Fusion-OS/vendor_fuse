@@ -63,9 +63,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.biometrics.face.xml
 endif
 
-# Include Icon Packs
-include vendor/fuse/config/iconpacks.mk
-
 # Do not include art debug targets
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 
@@ -73,12 +70,6 @@ PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 # the size of the system image. This has no bearing on stack traces, but will
 # leave less information available via JDWP.
 PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
-
-# Quick Tap
-ifeq ($(TARGET_SUPPORTS_QUICK_TAP),true)
-PRODUCT_COPY_FILES += \
-    vendor/fuse/prebuilt/common/etc/sysconfig/quick_tap.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/quick_tap.xml
-endif
 
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
@@ -89,16 +80,7 @@ ifeq ($(WITH_GAPPS),true)
 $(call inherit-product-if-exists, vendor/gms/products/gms.mk)
 endif
 
-# Fonts
-include vendor/fuse/config/fonts.mk
-
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images \
     product_charger_res_images
-
-# Themed icons
-$(call inherit-product, packages/overlays/ThemeIcons/config.mk)
-
-# Inherit from rro_overlays config
-$(call inherit-product, vendor/fuse/config/rro_overlays.mk)
