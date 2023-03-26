@@ -43,6 +43,7 @@ SOONG_CONFIG_fuseGlobalVars += \
     target_health_charging_control_supports_toggle \
     needs_camera_boottime \
     uses_oplus_camera \
+    uses_nothing_camera \
     supports_extended_compress_format \
     target_init_vendor_lib \
     target_surfaceflinger_udfps_lib \
@@ -72,6 +73,7 @@ SOONG_CONFIG_fuseQcomVars_qti_vibrator_use_effect_stream := $(TARGET_QTI_VIBRATO
 SOONG_CONFIG_fuseGlobalVars_camera_override_format_from_reserved := $(TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED)
 SOONG_CONFIG_fuseGlobalVars_needs_camera_boottime := $(TARGET_CAMERA_BOOTTIME_TIMESTAMP)
 SOONG_CONFIG_fuseGlobalVars_uses_oplus_camera := $(TARGET_USES_OPLUS_CAMERA)
+SOONG_CONFIG_fuseGlobalVars_uses_nothing_camera := $(TARGET_USES_NOTHING_CAMERA)
 
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
