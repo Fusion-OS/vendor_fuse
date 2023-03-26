@@ -42,6 +42,7 @@ SOONG_CONFIG_fuseGlobalVars += \
     target_health_charging_control_supports_deadline \
     target_health_charging_control_supports_toggle \
     needs_camera_boottime \
+    uses_oplus_camera \
     supports_extended_compress_format \
     target_init_vendor_lib \
     target_surfaceflinger_udfps_lib \
@@ -70,6 +71,7 @@ SOONG_CONFIG_fuseQcomVars_uses_pre_uplink_features_netmgrd := $(TARGET_USES_PRE_
 SOONG_CONFIG_fuseQcomVars_qti_vibrator_use_effect_stream := $(TARGET_QTI_VIBRATOR_USE_EFFECT_STREAM)
 SOONG_CONFIG_fuseGlobalVars_camera_override_format_from_reserved := $(TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED)
 SOONG_CONFIG_fuseGlobalVars_needs_camera_boottime := $(TARGET_CAMERA_BOOTTIME_TIMESTAMP)
+SOONG_CONFIG_fuseGlobalVars_uses_oplus_camera := $(TARGET_USES_OPLUS_CAMERA)
 
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
