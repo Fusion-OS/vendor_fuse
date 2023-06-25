@@ -28,6 +28,7 @@ $(foreach v,$(EXPORT_TO_SOONG),$(eval $(call addVar,$(v))))
 
 SOONG_CONFIG_NAMESPACES += fuseGlobalVars
 SOONG_CONFIG_fuseGlobalVars += \
+    aapt_version_code \
     additional_gralloc_10_usage_bits \
     bootloader_message_offset \
     camera_override_format_from_reserved \
@@ -84,6 +85,7 @@ TARGET_QTI_VIBRATOR_EFFECT_LIB ?= libqtivibratoreffect
 TARGET_SURFACEFLINGER_UDFPS_LIB ?= surfaceflinger_udfps_lib
 
 # Soong value variables
+SOONG_CONFIG_fuseGlobalVars_aapt_version_code := $(shell date -u +%Y%m%d)
 SOONG_CONFIG_fuseGlobalVars_additional_gralloc_10_usage_bits := $(TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS)
 SOONG_CONFIG_fuseGlobalVars_target_init_vendor_lib := $(TARGET_INIT_VENDOR_LIB)
 SOONG_CONFIG_fuseGlobalVars_bootloader_message_offset := $(BOOTLOADER_MESSAGE_OFFSET)
