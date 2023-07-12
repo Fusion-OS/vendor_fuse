@@ -33,6 +33,7 @@ $(call inherit-product, device/fuse/sepolicy/common/sepolicy.mk)
 
 # Vendor overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/fuse/overlay
+DEVICE_PACKAGE_OVERLAYS += vendor/fuse/overlay/common
 
 # Apps
 PRODUCT_PACKAGES += \
