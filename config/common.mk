@@ -67,6 +67,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.biometrics.face.xml
 endif
 
+# Fonts
+$(call inherit-product, vendor/fuse/config/fonts.mk)
+
 # Google Photos Pixel Exclusive XML
 PRODUCT_COPY_FILES += \
     vendor/fuse/prebuilt/common/etc/sysconfig/pixel_2016_exclusive.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_2016_exclusive.xml
