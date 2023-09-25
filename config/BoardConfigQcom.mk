@@ -227,3 +227,6 @@ endif
 # Allow a device to opt-out hardset of PRODUCT_SOONG_NAMESPACES
 QCOM_SOONG_NAMESPACE ?= hardware/qcom-caf/$(QCOM_HARDWARE_VARIANT)
 PRODUCT_SOONG_NAMESPACES += $(QCOM_SOONG_NAMESPACE)
+
+# Add wlan to PRODUCT_SOONG_NAMESPACES
+PRODUCT_SOONG_NAMESPACES += hardware/qcom-caf/wlan
