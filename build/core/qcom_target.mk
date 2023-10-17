@@ -24,6 +24,7 @@ $(call set-device-specific-path,WLAN,wlan,hardware/qcom-caf/wlan)
 PRODUCT_CFI_INCLUDE_PATHS += \
     hardware/qcom-caf/wlan/qcwcn/wpa_supplicant_8_lib
 
+include $(TOPDIR)vendor/fuse/build/core/vendor/qcom_boards.mk
 else
 
 QC_OPEN_PATH := vendor/qcom/opensource
