@@ -22,6 +22,9 @@ $(call inherit-product, vendor/fuse/config/versioning.mk)
 # Inherit from our kernel/header generator
 $(call inherit-product, vendor/fuse/config/BoardConfigFuse.mk)
 
+# SEPolicy
+$(call inherit-product, device/fuse/sepolicy/common/sepolicy.mk)
+
 # Inherit boot animation
 $(call inherit-product, vendor/fuse/config/bootanimation.mk)
 
