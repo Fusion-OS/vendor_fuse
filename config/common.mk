@@ -28,6 +28,11 @@ $(call inherit-product, device/fuse/sepolicy/common/sepolicy.mk)
 # Inherit boot animation
 $(call inherit-product, vendor/fuse/config/bootanimation.mk)
 
+# Gapps
+ifeq ($(WITH_GAPPS),true)
+$(call inherit-product-if-exists, vendor/gapps/common/common-vendor.mk)
+endif
+
 # World APN list
 PRODUCT_PACKAGES += \
     apns-conf.xml
