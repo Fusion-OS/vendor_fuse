@@ -28,6 +28,9 @@ $(call inherit-product, device/fuse/sepolicy/common/sepolicy.mk)
 # Inherit boot animation
 $(call inherit-product, vendor/fuse/config/bootanimation.mk)
 
+# SystemUIClocks
+$(call inherit-product, vendor/SystemUIClocks/product.mk)
+
 # Gapps
 ifeq ($(WITH_GAPPS),true)
 $(call inherit-product-if-exists, vendor/gapps/common/common-vendor.mk)
