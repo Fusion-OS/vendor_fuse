@@ -33,7 +33,7 @@ import urllib.request
 default_manifest = ".repo/manifest.xml"
 
 custom_local_manifest = ".repo/local_manifests/fusion.xml"
-custom_default_revision = "twelve"
+custom_default_revision = "fourteen"
 custom_dependencies = "fuse.dependencies"
 org_manifest = "github/FusionOS-Devices"  # leave empty if org is provided in manifest
 org_display = "FusionOS-Devices"  # needed for displaying
