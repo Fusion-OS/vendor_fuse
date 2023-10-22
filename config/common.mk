@@ -40,6 +40,11 @@ endif
 PRODUCT_PACKAGE_OVERLAYS += vendor/fuse/overlay
 DEVICE_PACKAGE_OVERLAYS += vendor/fuse/overlay/common
 
+# Apps
+PRODUCT_PACKAGES += \
+    ThemePicker \
+    Launcher3
+
 # World APN list
 PRODUCT_PACKAGES += \
     apns-conf.xml
