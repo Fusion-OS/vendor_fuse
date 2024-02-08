@@ -23,7 +23,7 @@ $(call inherit-product, vendor/fuse/config/versioning.mk)
 $(call inherit-product, vendor/fuse/config/BoardConfigFuse.mk)
 
 # SEPolicy
-$(call inherit-product, device/fuse/sepolicy/common/sepolicy.mk)
+$(call inherit-product, device/lineage/sepolicy/common/sepolicy.mk)
 
 # Inherit boot animation
 $(call inherit-product, vendor/fuse/config/bootanimation.mk)
